@@ -18,11 +18,11 @@ printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
 }
 else if (lastDigit % 10 == 0)
 {
-printf("Last digit of %d is %d and is 0\n", n, lastDigit);
+printf("Last digit of %d is %d and is 0\n",);
 }
-else
+else if ()
 {
-printf(" Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
+printf(" Last digit of %d is %d and is less than 6 and not 0\n",);
 }
 return (0);
 }
