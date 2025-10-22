@@ -1,5 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
+/**
+ * main - Entry point
+ * Return: Always 0 (success)
+ * /
 int main(void)
 {
 	int n;
@@ -7,3 +11,4 @@ int main(void)
 	n = rand() - RAND_MAX / 2:
 		printf("%d\n", n);
 	return 0;
+}
