@@ -7,7 +7,6 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{
 int n;
 int lastDigit;
 srand(time(0));
@@ -26,4 +25,4 @@ else
 {
 printf("and is less than 6 and not 0\n");
 }
-return (0);}
+return (0);
