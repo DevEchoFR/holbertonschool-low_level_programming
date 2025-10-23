@@ -3,10 +3,10 @@
  * main - Prints the lowercase alphabet followed by a newline
  * Return: Always 0 (Success)
  */
-int main(void)
+int main()
 {
-for (int i = 0; i <= 9; i++)
-putchar("%d" + i);
-putchar("\n");
+for( int i = 0; i <= 9; i++ )
+putchar( '0' + i );
+putchar( '\n' );
 return 0;
 }
