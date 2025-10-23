@@ -2,15 +2,18 @@
 /**
  * main - Prints the lowercase alphabet followed by a newline
  * Return: Always 0 (Success)
-*/
+ */
 int main(void)
 {
-int n;
-for (n = 0; n < 10; n++)
+int i;
+for (i = '0'; i <= '9'; i++)
 {
-putchar (n + '0');
-putchar (',');
+putchar(i);
+if(i == '9')
+continue;
+putchar(',');
+putchar(' ');
 }
-putchar ('\n');
-return (0);
+putchar('\n');
+return 0;
 }
