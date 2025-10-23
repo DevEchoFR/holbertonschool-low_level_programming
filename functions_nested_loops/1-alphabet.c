@@ -1,30 +1,26 @@
 #include "main.h"
 
 /**
- * main - prototype void print_alphabet(void)
- *
- * Return: Always 0.
+ * print_alphabet - Prints the lowercase alphabet followed by a newline
  */
-void print_alphabet(void) 
-
+void print_alphabet(void)
 {
+int i;
 
-for(char ch= 'a'; ch <= 'z'; ch++) 
-
+for (i = 97; i <= 122; i++)
 {
-
-putchar(ch) ;
-
+_putchar(i);
+}
+_putchar('\n');
 }
 
-}
-
-int main() 
-
+/**
+ * main - Entry point, calls print_alphabet
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-
-print_alphabet() ;
-
-return 0;
-
+print_alphabet();
+return (0);
 }
