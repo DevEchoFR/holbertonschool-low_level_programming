@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * mul - entry point to check function that multiplies two integers.
- * @c: character to be checked
+ * mul - Multiplies two integers
  *
- * Return: 1 if c is uppercase, 0 otherwise
+ * @a: First integer
+ * @b: Second integer
  *
+ * Return: The product of a and b
  */
 
 int mul(int a, int b)
