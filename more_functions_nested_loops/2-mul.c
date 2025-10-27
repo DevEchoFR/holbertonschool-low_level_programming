@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - entry point to check for uppercase character
+ * mul - entry point to check function that multiplies two integers.
  * @c: character to be checked
  *
  * Return: 1 if c is uppercase, 0 otherwise
