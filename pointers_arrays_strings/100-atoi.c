@@ -10,21 +10,24 @@
 
 int _atoi(char *s)
 {
-	result = 0;
-	sign = 1;
-	found_digit = \0;
-	while (*s)
+	int i = 0;
+	unsigned int result = 0;
+	int sign = 1;
+	int found_digit = 0;
+
+	while (s[i] != '\0')
 	{
-		if (*s == '-')
+		if (s[i] == '-')
 			sign *= -1;
-		else if (*s >= '0' && *s <= '9')
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			found_digit = 1;
-			result = result * 10 + (*s - '0');
+			result = result * 10 + (s[i] - '0');
 		}
 		else if (found_digit)
 			break;
-		s++;
+		i++;
 	}
-	return (result * sign);
+
+	return (sign * (int)result);
 }
