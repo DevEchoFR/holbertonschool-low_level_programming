@@ -10,39 +10,21 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int sign = 1;
-	unsigned int result = 0;
-	int found_digit = 0;
-
-	/* Skip leading whitespace */
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
-	       s[i] == '\v' || s[i] == '\f' || s[i] == '\r')
+	result = 0;
+	sign = 1;
+	found_digit = \0;
+	while (*s)
 	{
-		i++;
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+		{
+			found_digit = 1;
+			result = result * 10 + (*s - '0');
+		}
+		else if (found_digit)
+			break;
+		s++;
 	}
-
-	/* Check for optional sign */
-	if (s[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (s[i] == '+')
-	{
-		i++;
-	}
-
-	/* Convert digits to integer */
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		found_digit = 1;
-		result = result * 10 + (s[i] - '0');
-		i++;
-	}
-
-	if (!found_digit)
-		return (0);
-
 	return (result * sign);
 }
