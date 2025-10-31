@@ -10,7 +10,7 @@
 
 char *string_toupper(char *)
 {
-	char *ptr = s;
+	char *ptr = str;
 
 	while (*ptr != '\0')
 	{
@@ -21,5 +21,5 @@ char *string_toupper(char *)
 		ptr++;
 	}
 
-	return s;
+	return str;
 }
