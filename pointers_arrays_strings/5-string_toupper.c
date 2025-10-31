@@ -7,18 +7,18 @@
  * Return: pointer to the modified string
  */
 
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
 	int idx = 0;
 
-	while (str[idx] != '\0')
+	while (s[idx] != '\0')
 	{
-		if (str[idx] >= 'a' && str[idx] <= 'z')
+		if (s[idx] >= 'a' && s[idx] <= 'z')
 		{
-			str[idx] = str[idx] - ('a' - 'A');
+			s[idx] = s[idx] - ('a' - 'A');
 		}
 		idx++;
 	}
 
-	return (str);
+	return (s);
 }
