@@ -10,30 +10,28 @@
 
 int _atoi(char *s)
 {
-	int result, sign, found_digit = 0, max, min;
+	int i = 0;
+	int sign = 1;
+	unsigned int result = 0;
 
-	result = 0;
-	sign = 1;
-	max = 2147483647;
-	min = -2147483648;
+	/* Handle optional sign */
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
+	       s[i] == '\v' || s[i] == '\f' || s[i] == '\r')
+		i++;
 
-	while (*s)
+	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
 	{
-		if (*s == '-')
+		if (s[i] == '-')
 			sign *= -1;
-		else if (*s >= '0' && *s <= '9')
-		{
-			found_digit = 1;
-			result = result * 10 + (*s - '0');
-
-			if (sign == 1 && result > max)
-				return (max);
-			else if (sign == -1 && -result < min)
-				return (min);
-		}
-		else if (found_digit)
-			break;
-
-		s++;
+		i++;
 	}
+
+	/* Convert characters to integer */
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		result = result * 10 + (s[i] - '0');
+		i++;
+	}
+
+	return (result * sign);
 }
