@@ -13,15 +13,8 @@ void _puts_recursion(char *s)
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == '\n')
-		{
-			return;
-		}
-		else
-		{
-			break;
-		}
-		break;
+		s[i] = s[i];
+		i++;
 	}
 	_puts_recursion(s + 1);
 }
