@@ -23,6 +23,5 @@ void _puts_recursion(char *s)
 		}
 		break;
 	}
-	_putchar(*s);
 	_puts_recursion(s + 1);
 }
