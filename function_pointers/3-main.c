@@ -9,7 +9,6 @@
  *
  * Return: 0 on success, 98/99/100 on errors
  */
-
 int main(int argc, char *argv[])
 {
 int (*f)(int, int);
