@@ -11,6 +11,7 @@
  */
 
 typedef struct list_t
+/**@list_t */
 {
 char *str;
 unsigned int len;
