@@ -13,8 +13,7 @@ const list_t *node = h;
 *Meaning of h = head (start of the list)
 *Meaning of node = the one that moves through the list
 */
-/* Loop through the list */
-
+/*Loop through the list */
 while (node != NULL) /* TODO: stop when node is ... */
 {
 if (node->str == NULL) /* TODO: check if node->str is ... */
@@ -23,7 +22,8 @@ printf("[0] (nil)\n"); /* TODO: print: [0] (nil)\n */
 }
 else
 {
-printf("[%u] %s\n", node->len, node->str); /* TODO: print: [len] str\n using node->len and node->str */
+printf("[%u] %s\n", node->len, node->str);
+/*TODO: print: [len] str\n using node->len and node->str */
 }
 count++; /* TODO: increase the counter (count) */
 node = node->next; /* TODO: move to the next node in the list */
