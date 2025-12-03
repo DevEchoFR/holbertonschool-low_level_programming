@@ -9,12 +9,9 @@ size_t print_list(const list_t *h)
 {
 size_t count = 0;
 const list_t *node = h;
-/**
-*Meaning of h = head (start of the list)
-*Meaning of node = the one that moves through the list
-*/
 /*Loop through the list */
-while (node != NULL) /* TODO: stop when node is ... */
+while (node != NULL)
+/* TODO: stop when node is ... */
 {
 if (node->str == NULL) /* TODO: check if node->str is ... */
 {
