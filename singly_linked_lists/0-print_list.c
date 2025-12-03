@@ -12,11 +12,10 @@ size_t print_list(const list_t *h)
 {
 	size_t count = 0;
 	const list_t *node = h;
-
     /**
-     * Meaning of h = head (start of the list)
-     * Meaning of node = the one that moves through the list
-     */
+    * Meaning of h = head (start of the list)
+    * Meaning of node = the one that moves through the list
+    */
 
     /* Loop through the list */
 
@@ -34,7 +33,7 @@ size_t print_list(const list_t *h)
 
         count++; /* TODO: increase the counter (count) */
         node = node->next; /* TODO: move to the next node in the list */
-}
+  }
 
     return (count);
 }
