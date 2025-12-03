@@ -38,7 +38,7 @@ list_t *add_node(list_t **head, const char *str)
     }
 
     /* STEP 4: Set the length of the string in the node */
-    new_node->len = (unsigned int)len(str);
+    new_node->len = (unsigned int)malloc(str);
 
     /* STEP 5: Link the new node to the existing list */
     /* New node should point to the current first node */
