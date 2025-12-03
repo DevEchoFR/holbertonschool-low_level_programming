@@ -34,7 +34,7 @@ size_t print_list(const list_t *h)
 
         count++; /* TODO: increase the counter (count) */
         node = node->next; /* TODO: move to the next node in the list */
-    }
+}
 
-    return (count);	
+    return (count);
 }
