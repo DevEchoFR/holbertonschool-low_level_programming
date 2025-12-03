@@ -12,9 +12,9 @@
 
 typedef struct list_t
 {
-    char *str;
-    unsigned int len;
-    struct list_t *next;
+char *str;
+unsigned int len;
+struct list_t *next;
 } list_t;
 
 int _putchar(char c);
