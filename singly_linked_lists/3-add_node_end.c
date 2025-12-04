@@ -11,62 +11,41 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-    list_t *new_node;
-    list_t *temp;
-    unsigned int len = 0;
+	list_t *new_node;
+	list_t *temp;
+	unsigned int len = 0;
 
-    /* 1. Compute the length of str */
-    while ( str[len] )
-    /* condition using str and len */
-    {
-        len++;
-        /* increase length */
-    }
+	if (head == NULL || str == NULL)
+		return (NULL);
 
-    /* 2. Allocate memory for the new node */
-    new_node = malloc( sizeof( list_t ) );
-    if (new_node == NULL)
-        return (NULL);
+	while (str[len])
+		len++;
 
-    /* 3. Duplicate the string */
-    new_node->str = strdup(str);
-    /* use strdup */
-    if (new_node->str == NULL)
-    {
-        free(new_node);
-        /* free the node */
-        return (NULL);
-    }
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
+		return (NULL);
 
-    /* 4. Initialize the fields of the new node */
-    new_node->len = len;
-    /* set length value */
-    new_node->next = NULL;
-    /* should be NULL */
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
 
-    /* 5. If the list is empty, new node becomes the head */
-    if ( *head == NULL )
-    /* check if *head is empty */
-    {
-        *head = new_node;
-        /* make head point to new_node */
-        return (new_node);
-    }
+	new_node->len = len;
+	new_node->next = NULL;
 
-    /* 6. Otherwise, go to the end of the list */
-    temp = *head;
-    /* start from the first node */
-    while ( temp->next != NULL )
-    /* loop while not at last node */
-    {
-        temp = temp->next;
-        /* move temp to the next node */
-    }
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
 
-    /* 7. Attach the new node at the end */
-    temp->next = new_node;
-    /* connect last node to new_node */
+	temp = *head;
+	while (temp->next != NULL)
+		temp = temp->next;
 
-    return ( new_node );
-    /* return the address of new_node */
+	temp->next = new_node;
+
+	return (new_node);
 }
