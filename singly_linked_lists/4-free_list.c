@@ -30,6 +30,5 @@ void free_list(list_t *head)
 	}
 
 	/* Optional: after the loop, you know the entire list is freed */
-	/* You cannot change the original head in the caller here,
-	   but the memory used by the list is now released. */
+
 }
