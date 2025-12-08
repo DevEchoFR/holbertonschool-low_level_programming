@@ -10,6 +10,10 @@
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+void print_str_stderr(const char *s);
+void exit_with_error(const char *msg, const char *file, int code);
+void print_number_stderr(int n);
+void close_fd(int fd);
 
 #endif /* MAIN_H */
 
